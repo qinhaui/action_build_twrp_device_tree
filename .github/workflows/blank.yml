@@ -46,13 +46,10 @@ jobs:
     - name: ZIP device tree
       run: |
         zip -r DeviceTree.zip ./dt
-    - name: Upload to Release
-      uses: softprops/action-gh-release@v1
-      with:
-        files: |
-          ./DeviceTree.zip
-        name: TWRP_Device_Tree-${{ github.run_id }}
-        tag_name: gt22
-        body: DeviceTree for twrp
+	      - uses: actions/upload-artifact@v3
+        with:
+          name: gt2
+          path: ./DeviceTree.zip
+          if-no-files-found: ignore
       env:
         GITHUB_TOKEN: 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
