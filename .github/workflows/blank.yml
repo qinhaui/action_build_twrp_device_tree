@@ -52,7 +52,7 @@ jobs:
         files: |
           ./DeviceTree.zip
         name: TWRP_Device_Tree-${{ github.run_id }}
-        tag_name: ${{ github.run_id }}
+        tag_name: gt22
         body: DeviceTree for twrp
       env:
         GITHUB_TOKEN: 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
