@@ -46,7 +46,7 @@ jobs:
     - name: ZIP device tree
       run: |
         zip -r DeviceTree.zip ./dt
-	      - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v3
         with:
           name: gt2
           path: ./DeviceTree.zip
